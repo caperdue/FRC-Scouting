@@ -23,20 +23,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
      guard let authentication = user.authentication else { return }
      let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                        accessToken: authentication.accessToken)
+    
+
+    
     Auth.auth().signIn(with: credential, completion: {(result, error) in
       if let error = error {
-        print(error)
+        return
       }
       let uid = Auth.auth().currentUser?.uid
-      if Utilties.db.collection("Users/\(uid)") != nil {
+      Utilities.db.collection("Users").document(uid!).getDocument(completion: {(document, error) in
+        // User already exists, do nothing
+        if let document = document, document.exists {
+          return
+        }
         
-      }
-  
+        // Create the new user
+        else {
+          do {
+            let newUser = User(id: uid, myTeam: nil, teams: nil)
+            let _ = try Utilities.db.collection("Users").document(uid!).setData(from: newUser)
+          }
+          
+          catch {
+            print(error)
+          }
+        
+        }
+        
+        // Check if user is already assigned to a team
+        print(document?.data())
+        
       
       
     })
-     // ...
-  }
+
+  })
+    }
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

@@ -1,5 +1,5 @@
 //
-//  Team.swift
+//  User.swift
 //  FRC Scouting
 //
 //  Created by Carly Perdue on 5/9/21.
@@ -8,7 +8,8 @@
 import Foundation
 import FirebaseFirestoreSwift
 
-struct Team: Identifiable, Codable {
+struct User: Identifiable, Codable {
   @DocumentID var id: String?
-  var admins: [String]?
+  var myTeam: Int?
+  var teams: [Int]?
 }

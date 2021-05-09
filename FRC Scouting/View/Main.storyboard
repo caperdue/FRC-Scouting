@@ -27,7 +27,7 @@
                                     <action selector="signInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HA9-TQ-XGP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGB-e3-3Ox">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGB-e3-3Ox">
                                 <rect key="frame" x="70" y="493" width="274" height="30"/>
                                 <color key="backgroundColor" red="0.28140175340000001" green="0.50570857520000001" blue="0.95691126589999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>

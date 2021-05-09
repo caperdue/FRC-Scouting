@@ -8,6 +8,7 @@
 import UIKit
 import GoogleSignIn
 import FirebaseAuth
+import Firebase
 
 
 class LoginController: UIViewController {
@@ -19,24 +20,44 @@ class LoginController: UIViewController {
   var OK = UIAlertAction()
   var cancel = UIAlertAction()
   
-  
-  
   @IBAction func signInPressed(_ sender: UIButton) {
     GIDSignIn.sharedInstance().signIn()
 
   }
   
   @IBAction func joinTeamPressed(_ sender: UIButton) {
-    
-    var alert = UIAlertController(title: "Join Team", message: "Please enter team name below.", preferredStyle: UIAlertController.Style.alert)
+    let alert = UIAlertController(title: "Join Team", message: "Please enter team name below.", preferredStyle: UIAlertController.Style.alert)
     
     alert.addTextField { textField in
       textField.placeholder = "3572"
       self.teamTextField = textField
     }
-    
+
     OK = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { UIAlertAction in
+      Utilities.db.collection("Teams").document(self.teamTextField.text!).getDocument { document, error in
+        // Team already exists
+        let uid = Auth.auth().currentUser?.uid
+        do {
+        if let document = document, document.exists {
+      
+        }
+        else {
+          // No team in existence, create it
+            let newTeam = Team(id: self.teamTextField.text, admins: nil)
+            let _ = try Utilities.db.collection("Teams").document(self.teamTextField.text!).setData(from: newTeam)
+        }
+        
+        // Create the user now that a team for sure exists and add them to the team.
+          //Utilities.db.collection("Users").document(uid!).setDat
+
+        }
+        catch {
+          print(error)
+        }
+        self.performSegue(withIdentifier: "myTeamsSegue", sender: self)
     }
+    }
+      
     OK.isEnabled = false
     cancel = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel) { UIAlertAction in
 //
@@ -71,18 +92,25 @@ class LoginController: UIViewController {
     super.viewDidLoad()
     GIDSignIn.sharedInstance()?.presentingViewController = self
     
+    if let _ = Auth.auth().currentUser {
+      self.performSegue(withIdentifier: "myTeamsSegue", sender: self)
+    }
+    
     // Add state listener
     Auth.auth().addStateDidChangeListener { auth, user in
-      self.signInButton.isEnabled = !self.signInButton.isEnabled
-      self.joinTeamButton.isEnabled = !self.joinTeamButton.isEnabled
-      if let user = user {
+
+      if let _ = user {
         self.signInButton.alpha = 0.5
         self.joinTeamButton.alpha = 1
-
+        self.signInButton.isEnabled = false
+        self.joinTeamButton.isEnabled = true
         
       } else {
         self.signInButton.alpha = 1
         self.joinTeamButton.alpha = 0.5
+        
+        self.signInButton.isEnabled = true
+        self.joinTeamButton.isEnabled = false
 
 }
     }

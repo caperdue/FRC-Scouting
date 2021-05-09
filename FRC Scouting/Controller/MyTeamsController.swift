@@ -8,7 +8,7 @@
 import UIKit
 
 class MyTeamsController: UIViewController {
-  var myTeams: [Team] = [Team(number: 9, nickName: nil, comments: "", likeStatus: 0), Team(number: 9, nickName: nil, comments: "", likeStatus: 0)]
+  var myTeams: [UserTeam] = [UserTeam(number: 9, nickName: nil, comments: "", likeStatus: 0), UserTeam(number: 9, nickName: nil, comments: "", likeStatus: 0)]
   
   @IBOutlet weak var teamsTableView: UITableView!
  

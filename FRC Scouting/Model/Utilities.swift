@@ -8,6 +8,6 @@
 import UIKit
 import Firebase
 
-class Utilties {
+class Utilities {
   static let db = Firestore.firestore()
 }

@@ -14,10 +14,12 @@
 		422A4923264757AE0060B8AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 422A4921264757AE0060B8AB /* LaunchScreen.storyboard */; };
 		422A492E264757AE0060B8AB /* FRC_ScoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422A492D264757AE0060B8AB /* FRC_ScoutingTests.swift */; };
 		422A4939264757AE0060B8AB /* FRC_ScoutingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422A4938264757AE0060B8AB /* FRC_ScoutingUITests.swift */; };
+		4231BFFF2648435900527DB0 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231BFFE2648435900527DB0 /* Team.swift */; };
+		4231C0012648470F00527DB0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231C0002648470F00527DB0 /* User.swift */; };
 		425EA50A2647678E003AA678 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425EA5092647678E003AA678 /* Main.storyboard */; };
 		425EA50C26477102003AA678 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EA50B26477102003AA678 /* LoginController.swift */; };
 		425EA50E26477900003AA678 /* MyTeamsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EA50D26477900003AA678 /* MyTeamsController.swift */; };
-		425EA51326477A3A003AA678 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EA51226477A3A003AA678 /* Team.swift */; };
+		425EA51326477A3A003AA678 /* UserTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EA51226477A3A003AA678 /* UserTeam.swift */; };
 		425EA51726477C0B003AA678 /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 425EA51526477C0B003AA678 /* TeamCell.xib */; };
 		425EA51926477F96003AA678 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EA51826477F96003AA678 /* TeamCell.swift */; };
 		425EA51B264788CE003AA678 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EA51A264788CE003AA678 /* Utilities.swift */; };
@@ -58,10 +60,12 @@
 		422A4934264757AE0060B8AB /* FRC ScoutingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FRC ScoutingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		422A4938264757AE0060B8AB /* FRC_ScoutingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRC_ScoutingUITests.swift; sourceTree = "<group>"; };
 		422A493A264757AE0060B8AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4231BFFE2648435900527DB0 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		4231C0002648470F00527DB0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		425EA5092647678E003AA678 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		425EA50B26477102003AA678 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		425EA50D26477900003AA678 /* MyTeamsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTeamsController.swift; sourceTree = "<group>"; };
-		425EA51226477A3A003AA678 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		425EA51226477A3A003AA678 /* UserTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTeam.swift; sourceTree = "<group>"; };
 		425EA51526477C0B003AA678 /* TeamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamCell.xib; sourceTree = "<group>"; };
 		425EA51826477F96003AA678 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		425EA51A264788CE003AA678 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -162,8 +166,10 @@
 		425EA50F26477A16003AA678 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				425EA51226477A3A003AA678 /* Team.swift */,
+				425EA51226477A3A003AA678 /* UserTeam.swift */,
 				425EA51A264788CE003AA678 /* Utilities.swift */,
+				4231BFFE2648435900527DB0 /* Team.swift */,
+				4231C0002648470F00527DB0 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -490,8 +496,10 @@
 				425EA50C26477102003AA678 /* LoginController.swift in Sources */,
 				425EA51B264788CE003AA678 /* Utilities.swift in Sources */,
 				425EA51926477F96003AA678 /* TeamCell.swift in Sources */,
+				4231BFFF2648435900527DB0 /* Team.swift in Sources */,
+				4231C0012648470F00527DB0 /* User.swift in Sources */,
 				425EA50E26477900003AA678 /* MyTeamsController.swift in Sources */,
-				425EA51326477A3A003AA678 /* Team.swift in Sources */,
+				425EA51326477A3A003AA678 /* UserTeam.swift in Sources */,
 				422A4919264757AD0060B8AB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
