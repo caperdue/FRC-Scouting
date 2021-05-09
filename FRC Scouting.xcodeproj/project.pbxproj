@@ -3,18 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04C25B077FDFDFA9C5EEA722 /* Pods_FRC_Scouting_FRC_ScoutingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A1B5D86C517213C0E29986 /* Pods_FRC_Scouting_FRC_ScoutingUITests.framework */; };
 		422A4917264757AD0060B8AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422A4916264757AD0060B8AB /* AppDelegate.swift */; };
 		422A4919264757AD0060B8AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422A4918264757AD0060B8AB /* SceneDelegate.swift */; };
-		422A491B264757AD0060B8AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422A491A264757AD0060B8AB /* ViewController.swift */; };
-		422A491E264757AD0060B8AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 422A491C264757AD0060B8AB /* Main.storyboard */; };
 		422A4920264757AE0060B8AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 422A491F264757AE0060B8AB /* Assets.xcassets */; };
 		422A4923264757AE0060B8AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 422A4921264757AE0060B8AB /* LaunchScreen.storyboard */; };
 		422A492E264757AE0060B8AB /* FRC_ScoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422A492D264757AE0060B8AB /* FRC_ScoutingTests.swift */; };
 		422A4939264757AE0060B8AB /* FRC_ScoutingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422A4938264757AE0060B8AB /* FRC_ScoutingUITests.swift */; };
+		425EA50A2647678E003AA678 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425EA5092647678E003AA678 /* Main.storyboard */; };
+		425EA50C26477102003AA678 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EA50B26477102003AA678 /* LoginController.swift */; };
+		425EA50E26477900003AA678 /* MyTeamsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EA50D26477900003AA678 /* MyTeamsController.swift */; };
+		425EA51326477A3A003AA678 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EA51226477A3A003AA678 /* Team.swift */; };
+		425EA51726477C0B003AA678 /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 425EA51526477C0B003AA678 /* TeamCell.xib */; };
+		425EA51926477F96003AA678 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EA51826477F96003AA678 /* TeamCell.swift */; };
+		425EA51B264788CE003AA678 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EA51A264788CE003AA678 /* Utilities.swift */; };
+		42B78C0F26475DE300CEDF1D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42B78C0E26475DE300CEDF1D /* GoogleService-Info.plist */; };
+		E8BEDE9DEE3D3B918C940BBE /* Pods_FRC_Scouting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE808DCE030845A2E241C3E /* Pods_FRC_Scouting.framework */; };
+		FF9DB2279F4FC2E410F8313A /* Pods_FRC_ScoutingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCBB84409D91782FBF7C1380 /* Pods_FRC_ScoutingTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00501C354F07D11E42289849 /* Pods-FRC Scouting-FRC ScoutingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRC Scouting-FRC ScoutingUITests.debug.xcconfig"; path = "Target Support Files/Pods-FRC Scouting-FRC ScoutingUITests/Pods-FRC Scouting-FRC ScoutingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		26A1B5D86C517213C0E29986 /* Pods_FRC_Scouting_FRC_ScoutingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FRC_Scouting_FRC_ScoutingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		422A4913264757AD0060B8AB /* FRC Scouting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FRC Scouting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		422A4916264757AD0060B8AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		422A4918264757AD0060B8AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		422A491A264757AD0060B8AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		422A491D264757AD0060B8AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		422A491F264757AE0060B8AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		422A4922264757AE0060B8AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		422A4924264757AE0060B8AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +58,21 @@
 		422A4934264757AE0060B8AB /* FRC ScoutingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FRC ScoutingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		422A4938264757AE0060B8AB /* FRC_ScoutingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRC_ScoutingUITests.swift; sourceTree = "<group>"; };
 		422A493A264757AE0060B8AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		425EA5092647678E003AA678 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		425EA50B26477102003AA678 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		425EA50D26477900003AA678 /* MyTeamsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTeamsController.swift; sourceTree = "<group>"; };
+		425EA51226477A3A003AA678 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		425EA51526477C0B003AA678 /* TeamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamCell.xib; sourceTree = "<group>"; };
+		425EA51826477F96003AA678 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
+		425EA51A264788CE003AA678 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		42B78C0E26475DE300CEDF1D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6AE808DCE030845A2E241C3E /* Pods_FRC_Scouting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FRC_Scouting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72E31A62BA5CBCC223AF4656 /* Pods-FRC ScoutingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRC ScoutingTests.release.xcconfig"; path = "Target Support Files/Pods-FRC ScoutingTests/Pods-FRC ScoutingTests.release.xcconfig"; sourceTree = "<group>"; };
+		7A7F6E7E9FFE293E4787B776 /* Pods-FRC Scouting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRC Scouting.release.xcconfig"; path = "Target Support Files/Pods-FRC Scouting/Pods-FRC Scouting.release.xcconfig"; sourceTree = "<group>"; };
+		87F9094AD66E8B2E8F10E26B /* Pods-FRC Scouting-FRC ScoutingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRC Scouting-FRC ScoutingUITests.release.xcconfig"; path = "Target Support Files/Pods-FRC Scouting-FRC ScoutingUITests/Pods-FRC Scouting-FRC ScoutingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B9EA54EE1030F80328E54C12 /* Pods-FRC ScoutingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRC ScoutingTests.debug.xcconfig"; path = "Target Support Files/Pods-FRC ScoutingTests/Pods-FRC ScoutingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F6C7A2BDB348FF80130362EB /* Pods-FRC Scouting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRC Scouting.debug.xcconfig"; path = "Target Support Files/Pods-FRC Scouting/Pods-FRC Scouting.debug.xcconfig"; sourceTree = "<group>"; };
+		FCBB84409D91782FBF7C1380 /* Pods_FRC_ScoutingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FRC_ScoutingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8BEDE9DEE3D3B918C940BBE /* Pods_FRC_Scouting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF9DB2279F4FC2E410F8313A /* Pods_FRC_ScoutingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C25B077FDFDFA9C5EEA722 /* Pods_FRC_Scouting_FRC_ScoutingUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +106,13 @@
 		422A490A264757AD0060B8AB = {
 			isa = PBXGroup;
 			children = (
+				42B78C0E26475DE300CEDF1D /* GoogleService-Info.plist */,
 				422A4915264757AD0060B8AB /* FRC Scouting */,
 				422A492C264757AE0060B8AB /* FRC ScoutingTests */,
 				422A4937264757AE0060B8AB /* FRC ScoutingUITests */,
 				422A4914264757AD0060B8AB /* Products */,
+				A8F8F0D890F080964DF40ABF /* Pods */,
+				E00B47C72FFA94119BFEB2DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +129,11 @@
 		422A4915264757AD0060B8AB /* FRC Scouting */ = {
 			isa = PBXGroup;
 			children = (
+				425EA51126477A1D003AA678 /* Controller */,
+				425EA51026477A1A003AA678 /* View */,
+				425EA50F26477A16003AA678 /* Model */,
 				422A4916264757AD0060B8AB /* AppDelegate.swift */,
 				422A4918264757AD0060B8AB /* SceneDelegate.swift */,
-				422A491A264757AD0060B8AB /* ViewController.swift */,
-				422A491C264757AD0060B8AB /* Main.storyboard */,
 				422A491F264757AE0060B8AB /* Assets.xcassets */,
 				422A4921264757AE0060B8AB /* LaunchScreen.storyboard */,
 				422A4924264757AE0060B8AB /* Info.plist */,
@@ -128,6 +159,57 @@
 			path = "FRC ScoutingUITests";
 			sourceTree = "<group>";
 		};
+		425EA50F26477A16003AA678 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				425EA51226477A3A003AA678 /* Team.swift */,
+				425EA51A264788CE003AA678 /* Utilities.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		425EA51026477A1A003AA678 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				425EA5092647678E003AA678 /* Main.storyboard */,
+				425EA51526477C0B003AA678 /* TeamCell.xib */,
+				425EA51826477F96003AA678 /* TeamCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		425EA51126477A1D003AA678 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				425EA50B26477102003AA678 /* LoginController.swift */,
+				425EA50D26477900003AA678 /* MyTeamsController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A8F8F0D890F080964DF40ABF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6C7A2BDB348FF80130362EB /* Pods-FRC Scouting.debug.xcconfig */,
+				7A7F6E7E9FFE293E4787B776 /* Pods-FRC Scouting.release.xcconfig */,
+				00501C354F07D11E42289849 /* Pods-FRC Scouting-FRC ScoutingUITests.debug.xcconfig */,
+				87F9094AD66E8B2E8F10E26B /* Pods-FRC Scouting-FRC ScoutingUITests.release.xcconfig */,
+				B9EA54EE1030F80328E54C12 /* Pods-FRC ScoutingTests.debug.xcconfig */,
+				72E31A62BA5CBCC223AF4656 /* Pods-FRC ScoutingTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E00B47C72FFA94119BFEB2DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AE808DCE030845A2E241C3E /* Pods_FRC_Scouting.framework */,
+				26A1B5D86C517213C0E29986 /* Pods_FRC_Scouting_FRC_ScoutingUITests.framework */,
+				FCBB84409D91782FBF7C1380 /* Pods_FRC_ScoutingTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +217,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 422A493D264757AE0060B8AB /* Build configuration list for PBXNativeTarget "FRC Scouting" */;
 			buildPhases = (
+				25FC0B0D6ADD25EDAC1DC11B /* [CP] Check Pods Manifest.lock */,
 				422A490F264757AD0060B8AB /* Sources */,
 				422A4910264757AD0060B8AB /* Frameworks */,
 				422A4911264757AD0060B8AB /* Resources */,
+				32DD6DA10297485F9CB102AE /* [CP] Embed Pods Frameworks */,
+				A072A8195BB7ADE9E112E028 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +237,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 422A4940264757AE0060B8AB /* Build configuration list for PBXNativeTarget "FRC ScoutingTests" */;
 			buildPhases = (
+				A87A40E937C56948480F696C /* [CP] Check Pods Manifest.lock */,
 				422A4925264757AE0060B8AB /* Sources */,
 				422A4926264757AE0060B8AB /* Frameworks */,
 				422A4927264757AE0060B8AB /* Resources */,
@@ -170,9 +256,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 422A4943264757AE0060B8AB /* Build configuration list for PBXNativeTarget "FRC ScoutingUITests" */;
 			buildPhases = (
+				EEB1C1AE3CF58BD811182E18 /* [CP] Check Pods Manifest.lock */,
 				422A4930264757AE0060B8AB /* Sources */,
 				422A4931264757AE0060B8AB /* Frameworks */,
 				422A4932264757AE0060B8AB /* Resources */,
+				401D221492B4C2278AA53B76 /* [CP] Embed Pods Frameworks */,
+				1EDADA4AC90361777C241954 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,8 +321,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				422A4923264757AE0060B8AB /* LaunchScreen.storyboard in Resources */,
+				425EA51726477C0B003AA678 /* TeamCell.xib in Resources */,
+				42B78C0F26475DE300CEDF1D /* GoogleService-Info.plist in Resources */,
 				422A4920264757AE0060B8AB /* Assets.xcassets in Resources */,
-				422A491E264757AD0060B8AB /* Main.storyboard in Resources */,
+				425EA50A2647678E003AA678 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,13 +344,154 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1EDADA4AC90361777C241954 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FRC Scouting-FRC ScoutingUITests/Pods-FRC Scouting-FRC ScoutingUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FRC Scouting-FRC ScoutingUITests/Pods-FRC Scouting-FRC ScoutingUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FRC Scouting-FRC ScoutingUITests/Pods-FRC Scouting-FRC ScoutingUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25FC0B0D6ADD25EDAC1DC11B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FRC Scouting-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32DD6DA10297485F9CB102AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FRC Scouting/Pods-FRC Scouting-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FRC Scouting/Pods-FRC Scouting-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FRC Scouting/Pods-FRC Scouting-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		401D221492B4C2278AA53B76 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FRC Scouting-FRC ScoutingUITests/Pods-FRC Scouting-FRC ScoutingUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FRC Scouting-FRC ScoutingUITests/Pods-FRC Scouting-FRC ScoutingUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FRC Scouting-FRC ScoutingUITests/Pods-FRC Scouting-FRC ScoutingUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A072A8195BB7ADE9E112E028 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FRC Scouting/Pods-FRC Scouting-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FRC Scouting/Pods-FRC Scouting-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FRC Scouting/Pods-FRC Scouting-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A87A40E937C56948480F696C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FRC ScoutingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEB1C1AE3CF58BD811182E18 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FRC Scouting-FRC ScoutingUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		422A490F264757AD0060B8AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				422A491B264757AD0060B8AB /* ViewController.swift in Sources */,
 				422A4917264757AD0060B8AB /* AppDelegate.swift in Sources */,
+				425EA50C26477102003AA678 /* LoginController.swift in Sources */,
+				425EA51B264788CE003AA678 /* Utilities.swift in Sources */,
+				425EA51926477F96003AA678 /* TeamCell.swift in Sources */,
+				425EA50E26477900003AA678 /* MyTeamsController.swift in Sources */,
+				425EA51326477A3A003AA678 /* Team.swift in Sources */,
 				422A4919264757AD0060B8AB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,14 +528,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		422A491C264757AD0060B8AB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				422A491D264757AD0060B8AB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		422A4921264757AE0060B8AB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -433,6 +657,7 @@
 		};
 		422A493E264757AE0060B8AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6C7A2BDB348FF80130362EB /* Pods-FRC Scouting.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,6 +677,7 @@
 		};
 		422A493F264757AE0060B8AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A7F6E7E9FFE293E4787B776 /* Pods-FRC Scouting.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -471,6 +697,7 @@
 		};
 		422A4941264757AE0060B8AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9EA54EE1030F80328E54C12 /* Pods-FRC ScoutingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +720,7 @@
 		};
 		422A4942264757AE0060B8AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72E31A62BA5CBCC223AF4656 /* Pods-FRC ScoutingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +743,7 @@
 		};
 		422A4944264757AE0060B8AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00501C354F07D11E42289849 /* Pods-FRC Scouting-FRC ScoutingUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +764,7 @@
 		};
 		422A4945264757AE0060B8AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87F9094AD66E8B2E8F10E26B /* Pods-FRC Scouting-FRC ScoutingUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

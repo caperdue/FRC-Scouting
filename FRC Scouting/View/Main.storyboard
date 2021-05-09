@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XyG-jo-rTO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign In-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginController" customModule="FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdS-f9-uDf">
+                                <rect key="frame" x="107" y="423" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="KuM-BF-Xc3"/>
+                                    <constraint firstAttribute="height" constant="50" id="LQe-gv-MHu"/>
+                                </constraints>
+                                <state key="normal" title="Sign In With Google" image="btn_google_signin_dark_normal_web"/>
+                                <connections>
+                                    <action selector="signInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HA9-TQ-XGP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGB-e3-3Ox">
+                                <rect key="frame" x="70" y="493" width="274" height="30"/>
+                                <color key="backgroundColor" red="0.28140175340000001" green="0.50570857520000001" blue="0.95691126589999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Join A Team">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="joinTeamPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tpf-GZ-W9E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UW-3N-jB4">
+                                <rect key="frame" x="177" y="160" width="60" height="30"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signOutPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cv9-1Z-hgi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6UW-3N-jB4" firstAttribute="centerX" secondItem="KdS-f9-uDf" secondAttribute="centerX" id="8JM-r5-KEh"/>
+                            <constraint firstItem="aGB-e3-3Ox" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="G9F-De-dIT"/>
+                            <constraint firstItem="KdS-f9-uDf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GeD-cp-6xD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aGB-e3-3Ox" secondAttribute="trailing" constant="70" id="LDh-uC-VfV"/>
+                            <constraint firstItem="aGB-e3-3Ox" firstAttribute="top" secondItem="KdS-f9-uDf" secondAttribute="bottom" constant="20" id="biD-xV-ybG"/>
+                            <constraint firstItem="KdS-f9-uDf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gDv-tp-80t"/>
+                            <constraint firstItem="6UW-3N-jB4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="reJ-8c-T6N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sign In" id="N7L-cm-sxe"/>
+                    <connections>
+                        <outlet property="joinTeamButton" destination="aGB-e3-3Ox" id="XnI-9X-LLM"/>
+                        <outlet property="signInButton" destination="KdS-f9-uDf" id="KS9-gw-vtj"/>
+                        <outlet property="signOutButton" destination="6UW-3N-jB4" id="Y6P-Th-iQt"/>
+                        <segue destination="pVj-Ch-UQG" kind="show" identifier="myTeamsSegue" id="aLp-gt-mLq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1970" y="70"/>
+        </scene>
+        <!--My Teams-->
+        <scene sceneID="ziA-GA-WqA">
+            <objects>
+                <viewController id="pVj-Ch-UQG" customClass="MyTeamsController" customModule="FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v4Y-gf-X3J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HEk-4w-ESO">
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jbU-Kt-Hcf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HEk-4w-ESO" firstAttribute="trailing" secondItem="jbU-Kt-Hcf" secondAttribute="trailing" id="2wb-7y-msK"/>
+                            <constraint firstItem="HEk-4w-ESO" firstAttribute="top" secondItem="jbU-Kt-Hcf" secondAttribute="top" id="AWM-U8-1Qr"/>
+                            <constraint firstItem="HEk-4w-ESO" firstAttribute="leading" secondItem="jbU-Kt-Hcf" secondAttribute="leading" id="BwD-sk-Tr0"/>
+                            <constraint firstAttribute="bottom" secondItem="HEk-4w-ESO" secondAttribute="bottom" id="hdN-OW-dzi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Teams" id="V3D-7r-H8P"/>
+                    <connections>
+                        <outlet property="teamsTableView" destination="HEk-4w-ESO" id="Xer-eV-COe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FPz-00-RwH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2910.144927536232" y="75.669642857142847"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="DZk-zy-B0X">
+            <objects>
+                <tabBarController id="XyG-jo-rTO" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jNv-h9-Brt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="til-K2-ofZ" kind="relationship" relationship="viewControllers" id="1aO-pG-NPo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZUV-Fa-uCh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="154" y="70"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="wtY-a8-gk3">
+            <objects>
+                <navigationController id="til-K2-ofZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="pencil.circle" catalog="system" id="PFY-Y2-AW2"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="LmT-Gi-p2v">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="X5y-LY-zQI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Zc-Ah-OXJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1181" y="70"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_google_signin_dark_normal_web" width="191" height="46"/>
+        <image name="pencil.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
