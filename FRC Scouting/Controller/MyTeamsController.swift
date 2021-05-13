@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
 
 class MyTeamsController: UIViewController {
-  var myTeams: [UserTeam] = [UserTeam(number: 9, nickName: nil, comments: "", likeStatus: 0), UserTeam(number: 9, nickName: nil, comments: "", likeStatus: 0)]
+  var teams: [UserTeam] = []
+  var uid: String?
   
   @IBOutlet weak var teamsTableView: UITableView!
  
@@ -17,15 +20,40 @@ class MyTeamsController: UIViewController {
     teamsTableView.delegate = self
     teamsTableView.dataSource = self
     
+    if let uid = Auth.auth().currentUser?.uid {
+      let userTeam = UserTeam(id: "897", number:"897", nickname: "j", comments: "kk", likeStatus: "kk")
+
+      let _ = try? Utilities.db.collection("Users").document(uid).collection("teams").document("3572").setData(from: userTeam)
+                        
+      Utilities.db.collection("Users").document(uid).collection("teams").addSnapshotListener({ document, error in
+        if let error = error {
+          print(error)
+          return
+        }
+
+        if let document = document {
+          self.teams = document.documents.compactMap({ element in
+            return try? element.data(as: UserTeam.self)
+          })
+        }
+        
+        self.teamsTableView.reloadData()
+      })
+    }
+    
+    //navigationItem.prompt = "Team \(currentUser.myTeam ?? -1)"
+    // Register the cells
     let teamNib = UINib(nibName: "TeamCell", bundle: nil)
     teamsTableView.register(teamNib, forCellReuseIdentifier: "TeamCell")
+    
   }
+  
 }
 
 extension MyTeamsController: UITableViewDelegate, UITableViewDataSource {
   
   func numberOfSections(in tableView: UITableView) -> Int {
-    return myTeams.count
+    return teams.count
   }
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 1
@@ -41,21 +69,21 @@ extension MyTeamsController: UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "TeamCell", for: indexPath) as UITableViewCell
-    
+    let cell = tableView.dequeueReusableCell(withIdentifier: "TeamCell", for: indexPath) as! TeamCell
+    cell.teamNumber.text = self.teams[indexPath.section].number
+
     return cell
     
   }
-  
+  //Fix delete bug
   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-    
     self.teamsTableView.beginUpdates()
-    myTeams.remove(at: indexPath.section)
-    teamsTableView.deleteRows(at: [indexPath], with: .fade)
-    teamsTableView.deleteSections(IndexSet([indexPath.section]), with: .fade)
-    self.teamsTableView.endUpdates()
+    let currentCell = tableView.cellForRow(at: indexPath)! as! TeamCell
+    let uid = Auth.auth().currentUser?.uid
+    let teamName = currentCell.teamNumber.text!
+    Utilities.db.collection("Users").document(uid!).collection("teams").document(teamName).delete()
+    
     }
 
-  
   
 }

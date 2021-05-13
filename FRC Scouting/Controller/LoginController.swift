@@ -16,6 +16,7 @@ class LoginController: UIViewController {
   @IBOutlet weak var signInButton: UIButton!
   @IBOutlet weak var joinTeamButton: UIButton!
   @IBOutlet weak var signOutButton: UIButton!
+  
   var teamTextField = UITextField()
   var OK = UIAlertAction()
   var cancel = UIAlertAction()
@@ -37,23 +38,30 @@ class LoginController: UIViewController {
       Utilities.db.collection("Teams").document(self.teamTextField.text!).getDocument { document, error in
         // Team already exists
         let uid = Auth.auth().currentUser?.uid
-        do {
-        if let document = document, document.exists {
-      
-        }
-        else {
-          // No team in existence, create it
-            let newTeam = Team(id: self.teamTextField.text, admins: nil)
-            let _ = try Utilities.db.collection("Teams").document(self.teamTextField.text!).setData(from: newTeam)
-        }
+        let teamEntry = self.teamTextField.text!
+        let team = Team(id: teamEntry, admins: nil)
         
-        // Create the user now that a team for sure exists and add them to the team.
-          //Utilities.db.collection("Users").document(uid!).setDat
+        do {
+          if let document = document, document.exists {
+        
+          }
+          else {
+            // No team in existence, create it a
+              let _ = try Utilities.db.collection("Teams").document(teamEntry).setData(from: team)
+          
+          }
+            
+            // Reset the user's assigned team
+            let user = User(id: uid, uid: uid, myTeam: Int(teamEntry)!, teams: nil)
+            let _ = try Utilities.db.collection("Users").document(uid!).setData(from: user, merge: true)
+          
 
         }
+        
         catch {
           print(error)
         }
+        
         self.performSegue(withIdentifier: "myTeamsSegue", sender: self)
     }
     }
@@ -91,28 +99,45 @@ class LoginController: UIViewController {
     
     super.viewDidLoad()
     GIDSignIn.sharedInstance()?.presentingViewController = self
-    
-    if let _ = Auth.auth().currentUser {
-      self.performSegue(withIdentifier: "myTeamsSegue", sender: self)
-    }
-    
+
     // Add state listener
     Auth.auth().addStateDidChangeListener { auth, user in
-
-      if let _ = user {
-        self.signInButton.alpha = 0.5
-        self.joinTeamButton.alpha = 1
-        self.signInButton.isEnabled = false
-        self.joinTeamButton.isEnabled = true
+      if let user = user {
+        // Check if user is assigned to a team yet
+        Utilities.db.collection("Users").document(user.uid).getDocument( completion: { document, error in
+          if let error = error {
+            print(error.localizedDescription + "hi")
+            return
+          }
+          // Check if user has a team assigned.
+          if let document = document, document.exists, document.data()?["myTeam"] != nil {
+            // Means user has a team assigned already.
+            self.performSegue(withIdentifier: "myTeamsSegue", sender: self)
+            return
+            
+          }
+          // User has no team.
+          else {
+            self.signInButton.alpha = 0.5
+            self.joinTeamButton.alpha = 1
+            self.signInButton.isEnabled = false
+            self.joinTeamButton.isEnabled = true
+          }
+        })
+ 
+      
         
-      } else {
+      }
+      // User is not signed in
+      else {
+        
         self.signInButton.alpha = 1
         self.joinTeamButton.alpha = 0.5
         
         self.signInButton.isEnabled = true
         self.joinTeamButton.isEnabled = false
 
-}
+      }
     }
   }
   

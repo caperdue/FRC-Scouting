@@ -11,4 +11,5 @@ import FirebaseFirestoreSwift
 struct Team: Identifiable, Codable {
   @DocumentID var id: String?
   var admins: [String]?
+
 }

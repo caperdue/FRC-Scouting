@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // Create the new user
         else {
           do {
-            let newUser = User(id: uid, myTeam: nil, teams: nil)
+            let newUser = User(id: uid, uid: uid, myTeam: nil, teams: nil)
             let _ = try Utilities.db.collection("Users").document(uid!).setData(from: newUser)
           }
           
@@ -49,12 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
           }
         
         }
-        
-        // Check if user is already assigned to a team
-        print(document?.data())
-        
-      
-      
+
     })
 
   })

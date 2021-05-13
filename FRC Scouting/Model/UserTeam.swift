@@ -8,10 +8,13 @@
 import Foundation
 import FirebaseFirestoreSwift
 
-struct UserTeam: Identifiable, Codable {
+struct UserTeam: Codable, Identifiable {
   @DocumentID var id: String?
-  var number: Int
-  var nickName: String?
+  var number: String
+  var nickname: String
   var comments: String
-  var likeStatus: Int
+  var likeStatus: String
+  
 }
+
+
