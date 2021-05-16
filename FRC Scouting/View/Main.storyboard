@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -81,6 +82,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HEk-4w-ESO">
                                 <rect key="frame" x="0.0" y="140" width="414" height="756"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="7LU-yO-HU9">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jbU-Kt-Hcf"/>
@@ -92,14 +98,182 @@
                             <constraint firstAttribute="bottom" secondItem="HEk-4w-ESO" secondAttribute="bottom" id="hdN-OW-dzi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My Teams" id="V3D-7r-H8P"/>
+                    <navigationItem key="navigationItem" title="My Teams" id="V3D-7r-H8P">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="mS8-n0-QQt">
+                            <color key="tintColor" systemColor="systemGreenColor"/>
+                            <connections>
+                                <segue destination="eEP-hF-GRe" kind="show" identifier="scoutEditSegue" id="Y48-mp-eZv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="7LU-yO-HU9" id="Qlm-Ap-CdW"/>
                         <outlet property="teamsTableView" destination="HEk-4w-ESO" id="Xer-eV-COe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FPz-00-RwH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2910.144927536232" y="75.669642857142847"/>
+        </scene>
+        <!--Scout Team-->
+        <scene sceneID="Raa-ff-vdB">
+            <objects>
+                <viewController id="eEP-hF-GRe" customClass="ScoutTeamController" customModule="FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SKj-n9-205">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="907"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rPf-gT-5fp">
+                                <rect key="frame" x="0.0" y="140" width="414" height="767"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y1z-Vi-lTb">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="767"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="HQD-Rt-YUX">
+                                                <rect key="frame" x="15" y="0.0" width="384" height="752"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="2K2-6y-8SJ" userLabel="Name Stack View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="75"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cFp-f0-Z4c">
+                                                                <rect key="frame" x="0.0" y="0.0" width="384" height="31"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viq-aN-oWu">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="31"/>
+                                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="23"/>
+                                                                        <color key="textColor" red="0.0" green="0.075356465730000002" blue="0.57414569280000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vAx-4g-fWK">
+                                                                        <rect key="frame" x="170" y="0.0" width="214" height="32"/>
+                                                                        <segments>
+                                                                            <segment title="" image="hand.thumbsdown.fill" catalog="system"/>
+                                                                            <segment title="-"/>
+                                                                            <segment title="" image="hand.thumbsup.fill" catalog="system"/>
+                                                                        </segments>
+                                                                    </segmentedControl>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="3572" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BtS-IM-Dsu">
+                                                                <rect key="frame" x="0.0" y="37" width="384" height="38"/>
+                                                                <color key="backgroundColor" name="ViewBackgroundColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                            </textField>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="ULH-qC-ChS"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="CU3-tu-lif" userLabel="Name Stack View">
+                                                        <rect key="frame" x="0.0" y="90" width="384" height="75"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Name (optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wz-4u-XSd">
+                                                                <rect key="frame" x="0.0" y="0.0" width="384" height="26"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
+                                                                <color key="textColor" red="0.0" green="0.075356465730000002" blue="0.57414569280000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wavelength" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e8k-r1-rtM">
+                                                                <rect key="frame" x="0.0" y="32" width="384" height="43"/>
+                                                                <color key="backgroundColor" name="ViewBackgroundColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="Hhk-ss-L6y"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vX9-Ce-he6" userLabel="Comments Stack View">
+                                                        <rect key="frame" x="0.0" y="180" width="384" height="150"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picture Gallery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZI-ou-byV">
+                                                                <rect key="frame" x="0.0" y="0.0" width="384" height="33"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                                                <color key="textColor" red="0.0" green="0.075356465730000002" blue="0.57414569280000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yhJ-SS-tED">
+                                                                <rect key="frame" x="0.0" y="38" width="384" height="112"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.44313725490196076" blue="0.85490196078431369" alpha="0.095718080634312919" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <inset key="scrollIndicatorInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                                                <color key="textColor" name="ViewBackgroundColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" smartInsertDeleteType="no"/>
+                                                            </textView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="150" id="x9g-Ng-RcA"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uKa-sI-NfA" userLabel="Comments Stack View">
+                                                        <rect key="frame" x="0.0" y="345" width="384" height="407"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVt-h1-bLc">
+                                                                <rect key="frame" x="0.0" y="0.0" width="384" height="33"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                                                <color key="textColor" red="0.0" green="0.075356465730000002" blue="0.57414569280000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFE-tQ-jLz">
+                                                                <rect key="frame" x="0.0" y="38" width="384" height="369"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.44121110870000002" blue="0.85546381790000003" alpha="0.095718080629999994" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <inset key="scrollIndicatorInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                                                <color key="textColor" systemColor="labelColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" smartInsertDeleteType="no"/>
+                                                            </textView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="HQD-Rt-YUX" secondAttribute="trailing" constant="15" id="BFT-kF-det"/>
+                                            <constraint firstAttribute="bottom" secondItem="HQD-Rt-YUX" secondAttribute="bottom" constant="15" id="Bg9-E6-nX1"/>
+                                            <constraint firstItem="HQD-Rt-YUX" firstAttribute="top" secondItem="y1z-Vi-lTb" secondAttribute="top" id="e7X-mL-4Rp"/>
+                                            <constraint firstItem="HQD-Rt-YUX" firstAttribute="leading" secondItem="y1z-Vi-lTb" secondAttribute="leading" constant="15" id="rD8-I1-aOK"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="y1z-Vi-lTb" firstAttribute="top" secondItem="rPf-gT-5fp" secondAttribute="top" id="3nL-En-Qun"/>
+                                    <constraint firstItem="y1z-Vi-lTb" firstAttribute="width" secondItem="ktN-gz-ffK" secondAttribute="width" id="5RE-Ug-hup"/>
+                                    <constraint firstItem="ktN-gz-ffK" firstAttribute="bottom" secondItem="y1z-Vi-lTb" secondAttribute="bottom" id="6Uh-ck-bsS"/>
+                                    <constraint firstItem="g3N-Rt-06B" firstAttribute="trailing" secondItem="y1z-Vi-lTb" secondAttribute="trailing" id="Fps-zZ-317"/>
+                                    <constraint firstItem="y1z-Vi-lTb" firstAttribute="top" secondItem="g3N-Rt-06B" secondAttribute="top" id="NhM-2l-8F2"/>
+                                    <constraint firstAttribute="trailing" secondItem="y1z-Vi-lTb" secondAttribute="trailing" id="Tky-CC-oG1"/>
+                                    <constraint firstItem="y1z-Vi-lTb" firstAttribute="leading" secondItem="ktN-gz-ffK" secondAttribute="leading" id="cQl-L9-4Xm"/>
+                                    <constraint firstItem="y1z-Vi-lTb" firstAttribute="bottom" secondItem="g3N-Rt-06B" secondAttribute="bottom" id="lSf-iU-92a"/>
+                                    <constraint firstItem="y1z-Vi-lTb" firstAttribute="leading" secondItem="g3N-Rt-06B" secondAttribute="leading" id="tmF-Gc-pHW"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="g3N-Rt-06B"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="ktN-gz-ffK"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FxR-Qw-GhQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="rPf-gT-5fp" secondAttribute="bottom" id="5bA-tE-8Me"/>
+                            <constraint firstAttribute="trailing" secondItem="rPf-gT-5fp" secondAttribute="trailing" id="Izo-KR-R1a"/>
+                            <constraint firstItem="rPf-gT-5fp" firstAttribute="leading" secondItem="FxR-Qw-GhQ" secondAttribute="leading" id="dnS-FL-PMF"/>
+                            <constraint firstItem="rPf-gT-5fp" firstAttribute="top" secondItem="FxR-Qw-GhQ" secondAttribute="top" id="gy2-wi-puN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Scout Team" id="rKg-e5-he4"/>
+                    <size key="freeformSize" width="414" height="907"/>
+                    <connections>
+                        <outlet property="commentsTextView" destination="AFE-tQ-jLz" id="ud5-Lh-diq"/>
+                        <outlet property="likeControl" destination="vAx-4g-fWK" id="7ee-AH-gbx"/>
+                        <outlet property="teamNameField" destination="e8k-r1-rtM" id="wpu-Lf-ERY"/>
+                        <outlet property="teamNumberField" destination="BtS-IM-Dsu" id="zaO-Gn-QpZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OpH-xR-Pot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3688.4057971014495" y="93.415178571428569"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="DZk-zy-B0X">
@@ -138,9 +312,20 @@
     </scenes>
     <resources>
         <image name="btn_google_signin_dark_normal_web" width="191" height="46"/>
+        <image name="hand.thumbsdown.fill" catalog="system" width="128" height="121"/>
+        <image name="hand.thumbsup.fill" catalog="system" width="128" height="121"/>
         <image name="pencil.circle" catalog="system" width="128" height="121"/>
+        <namedColor name="ViewBackgroundColor">
+            <color red="0.0" green="0.44299998879432678" blue="0.85500001907348633" alpha="0.10000000149011612" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

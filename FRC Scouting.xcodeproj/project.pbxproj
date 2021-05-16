@@ -24,6 +24,7 @@
 		425EA51926477F96003AA678 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EA51826477F96003AA678 /* TeamCell.swift */; };
 		425EA51B264788CE003AA678 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425EA51A264788CE003AA678 /* Utilities.swift */; };
 		42B78C0F26475DE300CEDF1D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42B78C0E26475DE300CEDF1D /* GoogleService-Info.plist */; };
+		42D445362650A26E00FDE385 /* ScoutTeamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D445352650A26E00FDE385 /* ScoutTeamController.swift */; };
 		E8BEDE9DEE3D3B918C940BBE /* Pods_FRC_Scouting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE808DCE030845A2E241C3E /* Pods_FRC_Scouting.framework */; };
 		FF9DB2279F4FC2E410F8313A /* Pods_FRC_ScoutingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCBB84409D91782FBF7C1380 /* Pods_FRC_ScoutingTests.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,7 @@
 		425EA51826477F96003AA678 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		425EA51A264788CE003AA678 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		42B78C0E26475DE300CEDF1D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		42D445352650A26E00FDE385 /* ScoutTeamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutTeamController.swift; sourceTree = "<group>"; };
 		6AE808DCE030845A2E241C3E /* Pods_FRC_Scouting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FRC_Scouting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72E31A62BA5CBCC223AF4656 /* Pods-FRC ScoutingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRC ScoutingTests.release.xcconfig"; path = "Target Support Files/Pods-FRC ScoutingTests/Pods-FRC ScoutingTests.release.xcconfig"; sourceTree = "<group>"; };
 		7A7F6E7E9FFE293E4787B776 /* Pods-FRC Scouting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRC Scouting.release.xcconfig"; path = "Target Support Files/Pods-FRC Scouting/Pods-FRC Scouting.release.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			children = (
 				425EA50B26477102003AA678 /* LoginController.swift */,
 				425EA50D26477900003AA678 /* MyTeamsController.swift */,
+				42D445352650A26E00FDE385 /* ScoutTeamController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				422A4917264757AD0060B8AB /* AppDelegate.swift in Sources */,
+				42D445362650A26E00FDE385 /* ScoutTeamController.swift in Sources */,
 				425EA50C26477102003AA678 /* LoginController.swift in Sources */,
 				425EA51B264788CE003AA678 /* Utilities.swift in Sources */,
 				425EA51926477F96003AA678 /* TeamCell.swift in Sources */,

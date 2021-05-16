@@ -11,6 +11,7 @@ target 'FRC Scouting' do
   pod 'Firebase/Firestore'
   pod 'GoogleSignIn'
   pod 'FirebaseFirestoreSwift'
+  pod 'CodableFirebase'
   
 
   target 'FRC ScoutingTests' do

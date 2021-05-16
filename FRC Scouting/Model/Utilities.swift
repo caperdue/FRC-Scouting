@@ -7,7 +7,11 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
+
 
 class Utilities {
   static let db = Firestore.firestore()
+  
+  static let uid = Auth.auth().currentUser?.uid
 }

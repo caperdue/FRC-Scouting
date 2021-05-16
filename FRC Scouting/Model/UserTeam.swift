@@ -10,10 +10,10 @@ import FirebaseFirestoreSwift
 
 struct UserTeam: Codable, Identifiable {
   @DocumentID var id: String?
-  var number: String
-  var nickname: String
-  var comments: String
-  var likeStatus: String
+  var number: Int
+  var nickname: String?
+  var comments: String?
+  var likeStatus: Int
   
 }
 

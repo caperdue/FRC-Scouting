@@ -26,8 +26,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand.thumbsup.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Kxf-Qt-Ua1">
-                                <rect key="frame" x="277" y="4.5" width="35" height="26"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kxf-Qt-Ua1">
+                                <rect key="frame" x="277" y="5" width="35" height="26"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="eqe-Ej-G97"/>
@@ -63,7 +63,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="hand.thumbsup.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
